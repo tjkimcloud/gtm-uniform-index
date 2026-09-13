@@ -1,0 +1,12 @@
+company,person_name,title,current_employment_verified,leadership_relevance_verified,profile_url,photo_source_type,clothing_visibility
+ExampleCo,Avery Founder,Co-Founder and CEO,true,true,https://example.com/avery,linkedin,pass
+ExampleCo,Morgan Revenue,Chief Revenue Officer,true,true,https://example.com/morgan,linkedin,pass
+ExampleCo,Riley Marketing,Chief Marketing Officer,true,true,https://example.com/riley,linkedin,pass
+ExampleCo,Casey Legal,VP of Legal,true,true,https://example.com/casey,linkedin,pass
+ExampleCo,Jordan Growth,Head of Growth,true,true,https://example.com/jordan,linkedin,pass
+ExampleCo,Taylor Customer,Chief Customer Officer,true,true,https://example.com/taylor,linkedin,pass
+ExampleCo,Cameron Product,Chief Product Officer,true,true,https://example.com/cameron,linkedin,pass
+ExampleCo,Drew Operations,SVP of Operations,true,true,https://example.com/drew,linkedin,pass
+ExampleCo,Quinn Sales,VP of Sales,true,true,https://example.com/quinn,linkedin,pass
+ExampleCo,Reese Account,Account Executive,true,false,https://example.com/reese,linkedin,pass
+

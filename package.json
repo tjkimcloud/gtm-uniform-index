@@ -1,0 +1,17 @@
+{
+  "name": "gtm-uniform-index",
+  "version": "1.0.0",
+  "description": "A reproducible Clay and Qwen workflow for analyzing visible wardrobe patterns in leadership profile photos.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node src/demo.mjs",
+    "audit": "node src/audit-candidates.mjs",
+    "score": "node src/score-csv.mjs",
+    "classify:one": "node --env-file=.env src/classify-image.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,24 @@
+# Replace the example domains with companies in your own authorized project.
+# Keep the request bounded before running it against a quota-limited account.
+
+select from people
+where
+  clay.filter_to_companies(("example-a.com", "example-b.com"))
+  and experiences.any(
+    is_current = true
+    and job_title is_similar_to (
+      "Founder",
+      "Chief Executive Officer",
+      "Chief Revenue Officer",
+      "Chief Marketing Officer",
+      "Chief Customer Officer",
+      "Chief Product Officer",
+      "VP Sales",
+      "VP Marketing",
+      "VP GTM Operations",
+      "Head of Growth",
+      "Head of Customer Success"
+    )
+  )
+limit 12 by clay_company_id
+

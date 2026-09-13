@@ -1,0 +1,35 @@
+{
+  "requiredPeoplePerCompany": 8,
+  "candidateSearchLimitPerCompany": 12,
+  "seniorityWeights": {
+    "founder_or_c_suite": 100,
+    "president_evp_svp": 85,
+    "vp": 70,
+    "head": 60,
+    "director": 35,
+    "individual_contributor": 0
+  },
+  "functionWeights": {
+    "founder_ceo": 100,
+    "revenue_sales": 95,
+    "marketing": 90,
+    "gtm_operations": 88,
+    "growth_partnerships": 84,
+    "customer": 80,
+    "product_technology": 70,
+    "operations_strategy": 65,
+    "people": 45,
+    "finance": 35,
+    "legal": 10,
+    "other": 0
+  },
+  "qualificationGates": [
+    "current_employment_verified",
+    "leadership_relevance_verified",
+    "linkedin_profile_present",
+    "linkedin_photo_source",
+    "clothing_visibility_pass",
+    "unique_person"
+  ]
+}
+

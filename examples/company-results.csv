@@ -1,0 +1,9 @@
+company,dominant_cohort,uniform_strength,average_formality,average_founder_casual,average_deal_room,dominant_color,leadership_style_signal
+Apollo,Boardroom Classic,88,91,16,53,blue,Formal & Executive
+HubSpot,Corporate Casual,63,53,50,34,blue,Polished & Flexible
+Salesforce,Boardroom Classic,50,66,42,39,black,Formal & Executive
+Vercel,Corporate Casual,50,39,72,33,black,Polished & Flexible
+Profound,Boardroom Classic,38,54,49,31,blue,High Style Variety
+Gong,Corporate Casual,38,45,63,30,black,High Style Variety
+Clay,Founder Casual,38,34,71,21,other,High Style Variety
+

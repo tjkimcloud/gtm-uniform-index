@@ -1,0 +1,10 @@
+company,person_name,usable_image,confidence,suit_or_blazer,button_down,tie,vest,vest_type,quarter_zip,sweater,polo,hoodie,tshirt,blouse_or_professional_top,dress_or_jumpsuit,traditional_formalwear,outerwear,outerwear_type,branded_apparel,visible_brand,dominant_color,primary_formality,background_type
+ExampleCo,Leader 1,true,95,true,true,false,false,none,false,false,false,false,false,false,false,false,false,none,false,,navy,formal,plain
+ExampleCo,Leader 2,true,92,false,true,false,true,puffer,false,false,false,false,false,false,false,false,false,none,false,,navy,business_casual,office
+ExampleCo,Leader 3,true,90,false,false,false,false,none,true,false,false,false,false,false,false,false,false,none,false,,gray,business_casual,plain
+ExampleCo,Leader 4,true,94,false,false,false,false,none,false,false,false,false,false,true,false,false,false,none,false,,blue,business_casual,studio
+ExampleCo,Leader 5,true,89,false,false,false,false,none,false,true,false,false,false,false,false,false,false,none,false,,black,casual,plain
+ExampleCo,Leader 6,true,96,false,false,false,false,none,false,false,true,false,false,false,false,false,false,none,false,,navy,business_casual,office
+ExampleCo,Leader 7,true,88,false,false,false,false,none,false,false,false,false,true,false,false,false,false,none,false,,black,casual,outdoors
+ExampleCo,Leader 8,true,93,false,false,false,false,none,false,false,false,true,false,false,false,false,false,none,false,,gray,casual,plain
+

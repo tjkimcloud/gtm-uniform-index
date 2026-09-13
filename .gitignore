@@ -1,0 +1,12 @@
+.env
+.DS_Store
+node_modules/
+outputs/
+coverage/
+*.log
+
+# Never commit source photos or person-level exports.
+photos/
+data/private/
+*.raw.json
+
