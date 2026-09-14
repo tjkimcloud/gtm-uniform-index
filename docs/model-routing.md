@@ -59,3 +59,8 @@ The production pilot did not need DeepSeek Vision as a default layer. A dependab
 
 A recount edits the structured clothing record first. Company scores and prose are then regenerated downstream. Editorial text is never used as the source of truth.
 
+## Pilot audit
+
+All 56 accepted photos produced a structurally valid response on the first Qwen attempt. That did not end the review: 31 classifications were accepted as returned, while 25 received at least one correction or rules-based normalization.
+
+See [Quality control and audit](quality-control.md) for the review stages, aggregate counts, and examples of the errors the audit caught.

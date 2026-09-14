@@ -8,7 +8,9 @@ The premise is playful. The architecture is real.
 
 ## What the project tests
 
-Do the public-facing leaders at a company accidentally develop a recognizable LinkedIn wardrobe pattern?
+Had GTM leadership finally achieved perfect alignment? Or was it only from the shoulders down?
+
+More precisely: do the public-facing leaders at a company accidentally develop a recognizable wardrobe pattern in their profile photos?
 
 This project does **not** infer personality, professionalism, leadership ability, business performance, protected traits, or actual company culture. It records visible garments and presentation signals in a point-in-time set of profile photos.
 
@@ -74,6 +76,22 @@ flowchart LR
 
 The governing design principle was simple: **use AI for ambiguity and prose; use rules for repeatability.**
 
+## Quality-control results
+
+The first model response was never treated as ground truth. Every record passed through schema validation and a rules-based review before it could affect a score.
+
+The final audit produced:
+
+- 84 broadly retrieved candidates narrowed to 56 qualified leaders
+- 56 of 56 photos returned a structurally valid classification on the first model attempt
+- 31 classifications accepted without changes
+- 25 classifications corrected or normalized during review
+- 10 automated tests covering policy loading, roster selection, schema normalization, cohort precedence, aggregation, and score boundaries
+
+A valid JSON response is not the same as a correct observation. The review step caught issues such as a T-shirt tagged as a hoodie, a blazer treated as generic outerwear, and formality labels that conflicted with the locked garment rules.
+
+See [Quality control and audit](docs/quality-control.md) for the review contract and aggregate results.
+
 ## Free-plan constraint
 
 The Clay CLI Free-plan search allowance was 100 results for the period. The search was split into two bounded requests:
@@ -130,6 +148,13 @@ The structured observations produce:
 
 These are descriptive outputs from the selected photos, not estimates of the companies or their cultures.
 
+## The box score got weird
+
+- Black led the color field in 23 of 56 photos. The turtleneck may be gone, but the Steve Jobs palette survived.
+- Apollo supplied five of the six visible ties in the entire study. Salesforce supplied the sixth.
+- The hoodie category had one entrant across all 56 photos. It won by default.
+- Clay's dominant clothing cohort matched only three of eight leaders. Somebody run another waterfall.
+
 ## Run the sanitized demo
 
 Requirements: Node.js 20 or newer. There are no runtime dependencies.
@@ -158,6 +183,7 @@ The repository intentionally contains synthetic person-level inputs and real com
 - [Architecture](docs/architecture.md)
 - [Roster methodology](docs/roster-methodology.md)
 - [Model routing and QA](docs/model-routing.md)
+- [Quality control and audit](docs/quality-control.md)
 - [Clay implementation](docs/clay-implementation.md)
 - [Responsible-use boundary](docs/responsible-use.md)
 - [Publishing and article notes](docs/publishing-notes.md)
@@ -167,4 +193,3 @@ The repository intentionally contains synthetic person-level inputs and real com
 The public project includes a correction mechanic. If a profile has changed or a visible garment was classified incorrectly, the record can be rerun using the same photo-source policy, schema, and deterministic scoring rules. Corrections change the underlying fields first, then flow through the scores and company aggregates.
 
 Same source. Same model contract. Same rules.
-

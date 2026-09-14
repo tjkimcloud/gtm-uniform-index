@@ -10,7 +10,7 @@ This file preserves the project story for a LinkedIn carousel, long-form article
 >
 > It covers seven companies, eight senior leaders each, and one unnecessarily rigorous analysis of the clothing visible in their LinkedIn profile photos.
 >
-> The idea came to me at my son's birthday party, somewhere between pizza and cake. I had some extra Clay credits and apparently no ability to leave a ridiculous question alone.
+> The idea came to me at a birthday party my son attended as I watched him and the other kids play Mario Kart. I had some extra Clay credits and apparently no ability to leave a ridiculous question alone.
 
 ## The candidate-selection story
 
@@ -60,11 +60,12 @@ The concise design lesson:
 ## Carousel story
 
 1. The critical GTM infrastructure nobody requested
-2. Seven companies and 56 leaders
-3. The candidate search that selected the wrong level of employee
-4. The leadership and GTM-proximity audit
-5. Qwen plus Clay architecture
-6. Score definitions
-7. Company leaderboard
-8. Demand a Recount
-
+2. The birthday-party question
+3. Seven companies and 56 leaders
+4. The candidate search that selected the wrong level of employee
+5. The leadership and GTM-proximity depth chart
+6. Qwen plus Clay architecture
+7. Score definitions
+8. Company leaderboard
+9. The box score got weird
+10. Demand a Recount

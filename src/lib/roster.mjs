@@ -1,37 +1,13 @@
-export const seniorityWeights = {
-  founder_or_c_suite: 100,
-  president_evp_svp: 85,
-  vp: 70,
-  head: 60,
-  director: 35,
-  individual_contributor: 0
-};
+import { readFileSync } from "node:fs";
 
-export const functionWeights = {
-  founder_ceo: 100,
-  revenue_sales: 95,
-  marketing: 90,
-  gtm_operations: 88,
-  growth_partnerships: 84,
-  customer: 80,
-  product_technology: 70,
-  operations_strategy: 65,
-  people: 45,
-  finance: 35,
-  legal: 10,
-  other: 0
-};
+const policy = JSON.parse(
+  readFileSync(new URL("../../config/leadership-policy.json", import.meta.url), "utf8")
+);
 
-export const coverageOrder = [
-  "founder_ceo",
-  "revenue_sales",
-  "marketing",
-  "gtm_operations",
-  "growth_partnerships",
-  "customer",
-  "product_technology",
-  "operations_strategy"
-];
+export const seniorityWeights = Object.freeze({ ...policy.seniorityWeights });
+export const functionWeights = Object.freeze({ ...policy.functionWeights });
+export const coverageOrder = Object.freeze([...policy.coverageOrder]);
+export const requiredPeoplePerCompany = policy.requiredPeoplePerCompany;
 
 export function asBoolean(value) {
   if (typeof value === "boolean") return value;
@@ -93,7 +69,7 @@ function candidateOrder(a, b) {
   return b.selection_score - a.selection_score || a.person_name.localeCompare(b.person_name);
 }
 
-export function selectLeadershipRoster(candidates, requiredPeople = 8) {
+export function selectLeadershipRoster(candidates, requiredPeople = requiredPeoplePerCompany) {
   const scored = candidates.map(scoreCandidate);
   const seenProfiles = new Set();
   const eligible = [];
@@ -134,4 +110,3 @@ export function selectLeadershipRoster(candidates, requiredPeople = 8) {
     complete: selected.length === requiredPeople
   };
 }
-

@@ -3,7 +3,11 @@ import assert from "node:assert/strict";
 import {
   classifyFunction,
   classifySeniority,
+  coverageOrder,
+  functionWeights,
+  requiredPeoplePerCompany,
   scoreCandidate,
+  seniorityWeights,
   selectLeadershipRoster
 } from "../src/lib/roster.mjs";
 
@@ -16,6 +20,13 @@ const qualified = (person_name, title) => ({
   profile_url: `https://example.com/${person_name.toLowerCase().replaceAll(" ", "-")}`,
   photo_source_type: "linkedin",
   clothing_visibility: "pass"
+});
+
+test("runtime roster policy is loaded from the public configuration", () => {
+  assert.equal(requiredPeoplePerCompany, 8);
+  assert.equal(seniorityWeights.founder_or_c_suite, 100);
+  assert.equal(functionWeights.marketing, 90);
+  assert.deepEqual(coverageOrder.slice(0, 3), ["founder_ceo", "revenue_sales", "marketing"]);
 });
 
 test("seniority ladder separates executives from individual contributors", () => {
@@ -62,4 +73,3 @@ test("qualification gates route unusable photos to rejection", () => {
   assert.equal(result.complete, false);
   assert.match(result.rejected[0].audit_reason, /clothing visibility failed/);
 });
-

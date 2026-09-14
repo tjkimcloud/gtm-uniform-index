@@ -23,6 +23,16 @@
     "legal": 10,
     "other": 0
   },
+  "coverageOrder": [
+    "founder_ceo",
+    "revenue_sales",
+    "marketing",
+    "gtm_operations",
+    "growth_partnerships",
+    "customer",
+    "product_technology",
+    "operations_strategy"
+  ],
   "qualificationGates": [
     "current_employment_verified",
     "leadership_relevance_verified",
@@ -32,4 +42,3 @@
     "unique_person"
   ]
 }
-
